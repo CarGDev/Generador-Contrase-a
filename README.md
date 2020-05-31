@@ -1,5 +1,6 @@
 # Generador-Contrase-a
-Generador de contraseña aleatoria en python
+
+## Generador de contraseña aleatoria en python
 
 Se puede elegir el tamaño que se desea de la contraseña y esta te dara de manera aleatoria simbolos, letras minusculas, letras mayusculas y numeros
 
