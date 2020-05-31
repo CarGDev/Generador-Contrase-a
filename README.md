@@ -13,7 +13,9 @@ Los comandos que utilice para instalar el instalador de python fue:
 
 > `pip intall pyinstaller`
 
-el cual se encuentra en este link [Installdor de pyinstaller](https://www.pyinstaller.org/downloads.html/)
+el cual se encuentra en este link [Installdor de pyinstaller](https://www.pyinstaller.org/downloads.html)
 
-Despues que se haya instalado solo se debe utilizar el comando `pyinstaller --onefile nombredearchivo.py` para crear un ejecutable en un solo archivo con la extension *.exe*
+Despues que se haya instalado solo se debe utilizar el comando para crear un ejecutable en un solo archivo con la extension *.exe*
+
+> `pyinstaller --onefile nombredearchivo.py` 
 
