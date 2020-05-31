@@ -107,7 +107,7 @@ def selectionCharacter(A):
   return A
 
 def run():
-  l = int(raw_input("Lomgitud de tu contraseña: "))
+  l = int(input("Longitud de tu contraseña: "))
   numberArray = randomListArray(l)
   numbers = selectionCharacter(numberArray)
   passwordGenerated = ""
@@ -117,6 +117,7 @@ def run():
   print("---------------------o---------------------")
   print("Contraseña generada: " + passwordGenerated)
   print("---------------------o---------------------")
+  input('Press ENTER to exit')
 
 if __name__ == '__main__':
     print('G E N E R A D O R  D E  C O N T R A S E Ñ A')
