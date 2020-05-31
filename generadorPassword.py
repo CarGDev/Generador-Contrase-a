@@ -92,7 +92,6 @@ CHARACTERS = ['""',
               'y',
               'z',
               '{',
-              '|',
               '}']
 
 def randomListArray(n):
@@ -110,15 +109,14 @@ def selectionCharacter(A):
 def run():
   l = int(raw_input("Lomgitud de tu contraseña: "))
   numberArray = randomListArray(l)
-  print(numberArray)
-  #print("Not sorted array")
-  #print(numberArray)
   numbers = selectionCharacter(numberArray)
-  #print("Sorted array")
-  #for i in range (len(numbers)):
-   #   print
-  print(len(CHARACTERS))
-  print(numbers)
+  passwordGenerated = ""
+  for i in range (len(numbers)):
+      temp = numbers[i]
+      passwordGenerated = passwordGenerated + temp
+  print("---------------------o---------------------")
+  print("Contraseña generada: " + passwordGenerated)
+  print("---------------------o---------------------")
 
 if __name__ == '__main__':
     print('G E N E R A D O R  D E  C O N T R A S E Ñ A')
