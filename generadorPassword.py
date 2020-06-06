@@ -2,8 +2,9 @@
 import random
 from math import ceil
 import sys
+import re
 
-CHARACTERS = ['""',
+CHARACTERS = ['"',
               '!',
               '#',
               '$',
@@ -94,21 +95,40 @@ CHARACTERS = ['""',
               '{',
               '}']
 
+def passwordValidation (password):
+  try:
+    if 8 <= len(password) <= 30:
+      if re.search('[a-z]', password) and re.search('[A-Z]', password):
+        if re.search('[0-9]', password):
+          if re.search('[$@#]', password):
+            return True
+  except:
+    return False
+
 def randomListArray(n):
       arrayList = [0]  * n
       for i in range(n):
-        arrayList[i] = random.randint(0, len(CHARACTERS))
+        if (i == 0):
+          arrayList[i] = random.randint(32, 56)
+        else:
+          arrayList[i] = random.randint(0, len(CHARACTERS))
       return arrayList
 
 def selectionCharacter(A):
-  for i in range (0,len(A)):
-    try:
-      numTemp = A[i]
-      A[i] = CHARACTERS[numTemp]
-    except:
-      numTemp = numTemp -1
-      A[i] = CHARACTERS[numTemp]
-  return A
+  valor = False
+  while (valor != True):
+    for i in range (0,len(A)):
+      try:
+        numTemp = A[i]
+        A[i] = CHARACTERS[numTemp]
+      except:
+        numTemp = numTemp -1
+        A[i] = CHARACTERS[numTemp]
+
+    #value = passwordValidation(A)
+    if (passwordValidation(A) == True):
+      valor = True
+    return A
 
 def run():
   valor = False
