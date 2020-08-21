@@ -139,3 +139,4 @@ cython_debug/
 
 #Build folder
 build/
+generadorPassword.spec
